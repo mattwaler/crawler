@@ -1,0 +1,23 @@
+{
+	"name": "console-audit",
+	"version": "1.0.0",
+	"description": "Scans a sitemap and/or array of pages and generates a report.",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --write .",
+		"start": "node index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"prettier": "2.2.1"
+	},
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"date-fns": "^2.19.0",
+		"puppeteer": "^8.0.0",
+		"puppeteer-cluster": "^0.22.0",
+		"sitemapper": "^3.2.2"
+	}
+}
