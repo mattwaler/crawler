@@ -3,7 +3,7 @@ const Sitemapper = require('sitemapper')
 const config = require('./config')
 
 async function audit() {
-	// Construct List From Pages And/Or Sitemap
+  // Construct List From Pages And/Or Sitemap
 	let urls = [...config.urls]
 	if (config.sitemap) {
 		console.log('Scanning sitemap...')
@@ -27,8 +27,11 @@ async function audit() {
 	await cluster.task(config.onPageCrawl)
 
 	// Add each page in our settings to a queue
-	urls.forEach((url) => cluster.queue(url))
+	urls.forEach((url, index) => {
+    cluster.queue({ url, index, total: urls.length })
+  })
 
+  // Run Post Queue Actions
 	await cluster.idle()
 	await cluster.close()
 	await config.onCrawlCompletion()

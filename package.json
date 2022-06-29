@@ -11,13 +11,13 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"prettier": "2.2.1"
+		"prettier": "^2.7.1"
 	},
 	"dependencies": {
-		"chalk": "^4.1.0",
-		"date-fns": "^2.19.0",
-		"puppeteer": "^8.0.0",
-		"puppeteer-cluster": "^0.22.0",
+		"chalk": "^4.1.2",
+		"date-fns": "^2.28.0",
+		"puppeteer": "^15.1.1",
+		"puppeteer-cluster": "^0.23.0",
 		"sitemapper": "^3.2.2"
 	}
 }
